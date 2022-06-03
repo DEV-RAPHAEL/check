@@ -1,0 +1,50 @@
+/* Half Banner
+------------------------------*/
+.banner-dot {
+	.owl-dots {
+	    position: absolute;
+	    text-align: center;
+	    width: 100%;
+	    bottom: 15px;
+	}
+	&-white {
+		.owl-dots {
+			.owl-dot {
+				border: 2px solid $px-white;
+				background-color: transparent;
+				&.active {
+					background: $px-white;
+				}
+			}
+		}
+	}
+}
+
+/* Half Banner
+------------------------------*/
+.home-half-slider {
+	.slider {
+		min-height: 80vh;
+	}
+}
+
+/* Banner Text Large
+------------------------------*/
+.banner-text-large {
+	label {
+		font-weight: 600;
+		font-size: 18px;
+	}
+	h2 {
+		font-size: 65px;
+		font-weight: 700;
+		margin: 0px;
+		padding: 0 0 15px;
+	}
+	p {
+		font-size: 18px;
+	}
+	.btn-bar {
+		padding-top: 10px;
+	}
+}

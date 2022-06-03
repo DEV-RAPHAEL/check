@@ -1,0 +1,90 @@
+.social-icon {
+	a {
+		margin: 0 4px;
+		@include transition(ease all 0.35s);
+		&:first-child {
+			margin-left:0px;
+		}
+		&:last-child {
+			margin-right:0px;
+		}
+	}
+	@for $i from 3 through 7 {
+		&.si-#{$i * 10} {
+			a {
+				width: #{$i * 10}px;
+				height: #{$i * 10}px;
+				line-height: #{$i * 10}px;
+				text-align: center;
+				font-size: #{($i * 10) / 2 - 2}px;
+			}
+		}
+	}
+
+	&.white-icon {
+		a {
+			color: $px-white;
+		}
+	}
+	&.theme {
+		a {
+			background-color: $px-theme;
+			color: $px-white;
+			&:hover {
+				background-color: $px-theme2nd;
+			}
+		}
+	}
+	&.theme2nd {
+		a {
+			background-color: $px-theme2nd;
+			color: $px-white;
+			&:hover {
+				background-color: $px-theme;
+			}
+		}
+	}
+	&.white {
+		a {
+			background-color: $px-white;
+			color: $px-dark;
+			border: 1px solid $px-white;
+			&:hover {
+				background-color: transparent;
+				color: $px-white;
+			}
+		}
+	}
+	&.gray {
+		a {
+			background-color: #eee;
+			color: $px-dark;
+			border: 1px solid #eee;
+			&:hover {
+				background-color: $px-dark;
+				color: $px-white;
+			}
+		}
+	}
+	&.dark {
+		a {
+			background-color: $px-dark;
+			color: $px-white;
+			border: 1px solid $px-dark;
+			&:hover {
+				background-color: transparent;
+				color: $px-dark;
+			}
+		}
+	}
+	&.radius {
+		a {
+			border-radius: 50%;
+		}
+	}
+	&.round {
+		a {
+			border-radius: 3px;
+		}
+	}
+}

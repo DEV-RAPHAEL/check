@@ -1,0 +1,232 @@
+/* Desktop
+--------------------*/
+@mixin mm-link {
+	> a {
+		color: $px-body-color;
+	    display: block;
+	    font-size: 14px;
+	    font-weight: 400;
+	    i {
+	        font-size: 14px;
+		    vertical-align: middle;
+		    width: 24px;
+		    display: inline-block;
+		}
+	}
+	&:hover {
+		> a {
+			color: $px-theme;
+		}
+	}
+}
+@include up-lg {
+	.px-nav-toggle {
+		display: none;
+	}
+	.mm-in {
+		> a {
+			position: relative;
+			&:after {
+			    display: inline-block;
+			    font-family: "Font Awesome 5 Free";
+			    font-size: 65%;
+			    font-weight: 900;
+			    content: "\f107";
+			    margin-left: .5rem;
+			    transition: 0.3s ease;
+			}
+		}
+	}
+	.px-dropdown {
+		position: relative;
+		.m-dropdown-toggle {
+			display: none;
+		}
+		.px-dropdown-menu {
+		    position: absolute;
+		    top: 110%;
+		    left: 0;
+		    background: $px-white;
+		    box-shadow: 0px 26px 21px 0px rgba(0, 0, 0, 0.1);
+		    width: 180px;
+		    margin: 0;
+		    padding: 10px 0;
+		    list-style: none;
+		    pointer-events: none;
+		    @include transition(ease all 0.55s);
+		    opacity: 0;
+		    border-top: 3px solid $px-theme;
+		    > li {
+		    	> a {
+		    		padding: 8px 15px;
+		    	}
+		    	@include mm-link;
+		    }
+		}
+
+		&:hover {
+			.px-dropdown-menu {
+				opacity: 1;
+				top: 100%;
+				pointer-events: auto;
+			}
+		}
+	}
+
+	.px-mm-left {
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.px-mega {
+		position: static !important;
+		.px-mega-menu {
+			position: absolute;
+		    top: 110%;
+		    left: 0;
+		    background: $px-white;
+		    box-shadow: 0px 26px 21px 0px rgba(0, 0, 0, 0.1);
+		    width: 100%;
+		    margin: 0;
+		    list-style: none;
+		    pointer-events: none;
+		    @include transition(ease all 0.55s);
+		    opacity: 0;
+		    padding: 0;
+		    border-top: 3px solid $px-theme;
+		    > .container {
+		    	> .row {
+		    		width: calc(100% + 30px);
+		    	}
+		    }
+		}
+
+		.mm-title {
+			font-size: 16px;
+			font-weight: 700;
+			padding: 15px 0 10px;
+		    margin: 0;
+		}
+		.mm-link {
+			margin: 0;
+			padding: 0 0 15px;
+			li {
+				list-style: none;
+				position: relative;
+				padding: 5px 0;
+				@include mm-link;
+			}
+		}
+		&:hover {
+			.px-mega-menu {
+				opacity: 1;
+				top: 100%;
+				pointer-events: auto;
+			}
+		}
+	}
+}
+
+/* Mobile
+--------------------*/
+@include down-lg {
+	.px-nav-toggle {
+		position: absolute;
+	    top: 0;
+	    right: 0;
+	    width: 40px;
+	    height: 40px;
+	    line-height: 40px;
+	    text-align: center;
+    	border-left: 1px solid #e6e6e6;
+    	color: $px-dark;
+	}
+	.mm-in {
+		position: relative;
+		.mm-dorp-in {
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+		    display: none;
+		    padding: 0;
+	    	background: #f5f5f5;
+	    	border-top: 1px solid #e6e6e6;
+			> li {
+				padding-left: 15px;
+				&:not(:last-child) {
+					border-bottom: 1px solid #e6e6e6;
+				}
+				> a {
+		            display: block;
+				    padding: 0;
+				    font-size: 13px;
+				    font-weight: 600;
+				    line-height: 40px;
+				    color: $px-dark;
+					&:hover {
+						color:$px-theme;
+					}
+				}
+			}
+		}
+
+		.px-mega-menu {
+			.row {
+				> [class*="col-"] {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+			> .container {
+				max-width: 100%;
+		    	> .row {
+		    		width: calc(100% + 30px);
+		    	}
+		    }
+			.mm-title {
+				padding: 10px 15px;
+			    margin: 0;
+			    border-bottom: 1px solid #e6e6e6;
+			    border-top: 1px solid #e6e6e6;
+			    margin-top: -1px;
+			    font-weight: 600;
+			    color: $px-theme;
+			    font-size: 15px;
+			}
+			.mm-link {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				> li {
+					padding-left: 10px;
+					&:not(:first-child) {
+						border-top: 1px solid #e6e6e6;
+					}
+					> a {
+			            display: block;
+					    padding: 0 5px;
+					    font-size: 14px;
+					    font-weight: 400;
+					    line-height: 40px;
+					    color: $px-dark;
+					    i {
+					        font-size: 14px;
+						    vertical-align: middle;
+						    width: 24px;
+						    display: inline-block;
+						}
+						&:hover {
+							color:$px-theme;
+						}
+					}
+				}
+			}
+		}
+		&.open-menu-parent {
+			.mm-dorp-in {
+				display: block;
+			}
+		}
+	}
+}

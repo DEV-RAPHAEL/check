@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('../fonts/fonts.css');
+
+
+// Color system
+$px-theme:            #008aff !default; 
+$px-theme2nd:         #ffbe3d !default;
+$px-theme3rd:         #171347 !default; 
+
+// colors
+$px-body-color:       #718096 !default; 
+$px-black:            #000000 !default; 
+$px-white:            #ffffff !default;
+$px-dark:             #171347 !default;
+$px-medium-dark:      #1a191d !default;
+$px-gray:             #f2f3fa !default;
+$px-light-gray:       #eee !default;
+$px-yellow:           #ffbe3d !default;
+$px-green:            #11e279 !default;
+$px-blue:             #15b2ec !default;
+$px-pink:             #f12699 !default;
+
+$px-gray-800:             #384c74 !default;
+$px-gray-300:             #d9e2ef !default;
+$px-gray-200:             #f1f4f8 !default;
+
+// color map
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "theme":        $px-theme,
+    "theme2nd":     $px-theme2nd,
+    "theme3rd":     $px-theme3rd,
+    "dark":         $px-dark,
+    "gray":         $px-gray,
+    "gray-800":     $px-gray-800,
+    "gray-300":     $px-gray-300,
+    "gray-200":     $px-gray-200,
+    "light-gray":   $px-light-gray,
+    "medium-dark":  $px-medium-dark,
+    "white":        $px-white,
+    "black":        $px-black,
+    "yellow":       $px-yellow,
+    "green":        $px-green,
+    "blue":         $px-blue,
+    "pink":         $px-pink,
+    "body":         $px-body-color,
+  ),
+  $theme-colors
+);
+
+// card
+$px-card-border:                #eff2f7 !default;
+
+// Font system
+$px-base-font:                  1rem !default;
+$px-font-family:                'Roboto', sans-serif; // Main Font Family
+$px-font-family-alt:            'Space Grotesk', sans-serif;     // Alternative Font Family    
+
+// Breakpoints
+$px-media-sm:                   567px !default;
+$px-media-md:                   767px !default;
+$px-media-lg:                   991px !default;
+$px-media-xl:                   1199px !default;
+
+
+// Buttons 
+$button-padding-y:          0.68rem;
+$button-padding-x:          1.4rem;
+
+$button-padding-y-xs:       .35rem;
+$button-padding-x-xs:       .6rem;
+
+$button-padding-y-sm:       .5rem;
+$button-padding-x-sm:       1.25rem;
+
+$button-padding-y-lg:       1rem;
+$button-padding-x-lg:       1.875rem;
+
+$button-padding-y-xl:       1.5rem;
+$button-padding-x-xl:       2rem;
+
+$button-weight:              600;
+
+$button-font-size:          1rem;
+$button-font-size-sm:       .85rem;
+$button-font-size-xs:       .75rem;
+$button-font-size-lg:       1rem;
+$button-font-size-xl:       1.5rem;
+
+$button-shadow:             0 21px 35px -5px rgba(0,0,0,0.30);
+$button-round:              5rem;
+$button-radius:             .375rem;
+
+$box-shadow:        0 0 1.25rem rgba(31,45,61,.05) !default;
+$box-shadow-lg:     0 1rem 3rem rgba(31,45,61,.125) !default;
+
+// Input 
+$form-control-border:   #e2e8f0;
+
+// Buttons color map
+$button-colors: ();
+$button-colors: map-merge(
+  (
+    "theme":        $px-theme,
+    "theme2nd":     $px-theme2nd,
+    "theme3rd":     $px-theme3rd,
+    "dark":         $px-dark,
+    "yellow":       $px-yellow,
+    "green":        $px-green,
+    "blue":         $px-blue,
+    "pink":         $px-pink,
+  ),
+  $button-colors
+);

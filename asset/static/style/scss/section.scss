@@ -1,0 +1,257 @@
+img {
+	max-width: 100%;
+}
+
+figcaption {
+    margin-top: .5rem;
+	font-size: .875rem;
+}
+
+/* ----------------------
+*	Loading
+---------------------------*/
+#loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $px-theme;
+	z-index: 99999;
+}
+.load-circle {
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+	 span {
+	  display: inline-block;
+	  width: 64px;
+	  height: 64px;
+	  &:after {
+		  content: " ";
+		  display: block;
+		  width: 46px;
+		  height: 46px;
+		  margin: 1px;
+		  border-radius: 50%;
+		  border: 5px solid $px-white;
+		  border-color: $px-white transparent $px-white transparent;
+		  animation: lds-dual-ring 1.2s linear infinite;	
+	  }
+	}
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ----------------------
+*	Section
+-------------------------*/
+.container-large {
+	max-width: 1440px;
+}
+.container-extra-large {
+	max-width: 1580px;
+}
+.container-small {
+	max-width: 750px;
+}
+.section {
+	padding: 100px 0;
+	@include down-lg {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+	@include down-md {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+.section-top-up {
+	.container {
+		margin-top: -190px;
+	    position: relative;
+	    z-index: 1;
+	}
+}
+.section-top-up-100 {
+	.container {
+		margin-top: -100px;
+	    position: relative;
+	    z-index: 1;
+	}
+}
+
+/* ----------------------
+*	Height width
+---------------------------*/
+.full-screen {
+	min-height: 100vh;
+}
+.screen-85 {
+	min-height: 85vh;
+}
+.screen-65 {
+	min-height: 65vh;
+}
+.screen-50 {
+	min-height: 50vh;
+}
+
+@include up-lg {
+	.img-half-left {
+		width: 50vw;
+	    height: 100%;
+		margin-left: calc(100% - 50vw + 15px);
+	}
+	.img-half {
+	    width: 50vw;
+	    height: 100%;
+	    margin-left: -15px;
+	}
+}
+
+/* ----------------------
+*	Width Mixin
+---------------------------*/
+@for $i from 0 through 20 {
+	.width-#{$i * 5} {
+		width: #{$i * 5%};
+	}
+}
+
+@include up-xl {
+	@for $i from 0 through 20 {
+		.xl-width-#{$i * 5} {
+			width: #{$i * 5%};
+		}
+	}	
+}
+
+@include up-lg {
+	@for $i from 0 through 20 {
+		.lg-width-#{$i * 5} {
+			width: #{$i * 5%};
+		}
+	}	
+}
+
+@include up-md {
+	@for $i from 0 through 20 {
+		.md-width-#{$i * 5} {
+			width: #{$i * 5%};
+		}
+	}	
+}
+
+.w-350px {
+	max-width: 350px;
+	width: 100%;
+}
+.w-500px {
+	max-width: 500px;
+	width: 100%;
+}
+
+.w-600px {
+	max-width: 600px;
+	width: 100%;
+}
+
+.max-w-100 {
+	max-width: 100%;
+}
+
+.max-width-auto {
+	max-width: none;
+	@include down-lg {
+		max-width: 100%;
+	}
+}
+.max-width-120 {
+	@include up-lg {
+		max-width: 120%; 
+	}
+}
+.max-width-140 {
+	@include up-lg {
+		max-width: 140%; 
+		.owl-carousel .owl-item & {
+			max-width: 140%;
+		}
+	}
+}
+
+.min-h-350px {
+	min-height: 350px;
+}
+.min-h-250px {
+	min-height: 250px;
+}
+.min-h-150px {
+	min-height: 150px;
+}
+
+
+/* ----------------------
+*	Grid Demo
+---------------------------*/
+.demo-grid {
+	[class^="col-"] {
+	    background-color: #f5f5f5;
+	    border: 1px solid rgba(0, 0, 0, 0.2);
+	    margin-bottom: 15px;
+	    padding: 10px 0;
+	    text-align: center;
+	}
+}
+
+/* ----------------------
+*	Cookie Dialog
+---------------------------*/
+.herbyCookieConsent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: $px-white;
+    text-align: center;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    p {
+	    display: inline;
+	    color: $px-dark;
+	}
+	a {
+	    text-decoration: underline;
+	    color: $px-dark;
+	    font-weight: 600;
+	}
+	.herbyBtn {
+	    display: inline-block;
+	    padding: 4px 10px;
+	    vertical-align: middle;
+	    margin-left: 15px;
+	    line-height: normal;
+	    background: $px-theme;
+	    font-size: 16px;
+	    font-weight: normal;
+	    color: $px-white !important;
+	    border-radius: 15px;	
+	    cursor: pointer;
+	}
+}

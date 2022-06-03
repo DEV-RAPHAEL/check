@@ -1,0 +1,91 @@
+/* ----------------------
+*   owl 
+---------------------------*/
+.owl-dots {
+    text-align: center;
+    .main-slider & {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        font-size: 0px;
+    }
+    .owl-dot {
+        display: inline-block;
+        vertical-align: top;
+        width: 15px;
+        height: 15px;
+        background: $px-white;
+        border: 1px solid $px-theme;
+        @include transition(ease all 0.55s);
+        border-radius: 50%;
+        margin: 0 5px;
+        .owl-carousel-white & {
+            border-color: $px-white;
+            background: none;
+        }
+        &.active {
+            background: $px-theme;
+            .owl-carousel-white & {
+                background: $px-white;
+            }
+        }
+    }
+}
+
+.owl-carousel {
+    .owl-item {
+        img {
+            width: auto;
+            max-width: 100%;
+        }
+    }
+}
+
+.owl-no-overflow {
+    .owl-stage-outer {
+        overflow: inherit;
+    }
+}
+
+.owl-nav {
+    .owl-next,
+    .owl-prev {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 25px;
+        height: 40px;
+        margin: auto;
+        color: $px-dark;
+        text-align: center;
+        line-height: 40px;
+        font-size: 15px;
+        background: $px-white;
+        i {
+            line-height: inherit;
+        }
+        .owl-nav-arrow-bottom & {
+            position: relative;
+            display: inline-block;
+            margin-right: 6px;
+            width: 30px;
+            height: 30px;
+            background: $px-dark;
+            color: $px-white;
+            border-radius: 50%;
+            padding: 0;
+            line-height: 30px;
+            font-size: 13px;
+            &:hover {
+                background: $px-theme;
+            }
+        }
+    }
+    .owl-next {
+        right: 0;
+    }
+    .owl-prev {
+        left: 0;
+    }
+}

@@ -1,0 +1,29 @@
+
+@for $i from 3 through 12 {
+	.avatar-#{$i * 10} {
+		width: #{$i * 10}px;
+		height: #{$i * 10}px;
+		overflow: hidden;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+.avatar-220 {
+	width: 220px;
+	height: 220px;
+	overflow: hidden;	
+}
+
+.avatar-group {
+	display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    li {
+    	border: 2px solid $px-white;
+    	&:not(:last-child) {
+    		margin-right: -15px;
+    	}
+    }
+}

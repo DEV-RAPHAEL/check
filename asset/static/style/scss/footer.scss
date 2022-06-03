@@ -1,0 +1,118 @@
+.footer {
+	.footer-top {
+		padding-top: 50px;
+		padding-bottom: 50px;
+		@include down-lg {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		@include down-md {
+			padding-top: 25px;
+			padding-bottom: 5px;
+		}
+	}
+
+	.footer-title {
+		margin-bottom: 20px;
+		font-size: 18px;
+		font-weight: 600;
+	}
+
+	.footer-bottom {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		.nav {
+			li {
+				margin-bottom: 0;
+				&:not(:first-child),
+				&:not(:last-child) {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+
+	.links-white {
+		a:not(:hover) {
+			color: rgba($px-white, 0.6);
+		}
+	}
+
+	.font-small {
+		font-size: .875rem;
+	}
+
+	a.theme2nd-color {
+		&:hover {
+			color: $px-white;
+		}
+	}
+
+	.footer-link-1 {
+		margin: 0;
+		li {
+		    margin: 0 0 10px;
+		    a {
+		    	position: relative;
+		    	&:after {
+		    		content:"";
+		    		position: absolute;
+		    		bottom: 0;
+		    		right: 0;
+		    		left: auto;
+		    		width: 0px;
+		    		height: 1px;
+		    		@include transition(ease all 0.35s);
+		    		background: currentColor;
+		    	}
+		    	&:hover {
+		    		&:after {
+	    			    width: 100%;
+					    left: 0;
+					    right: auto;
+		    		}
+		    	}
+		    }
+		    &:last-child {
+		    	margin-bottom:0;
+		    }
+		}
+	}
+
+	.footer-link-2 {
+		margin: 0;
+		li {
+		    margin: 0 0 15px;
+		    a {
+	    	    position: relative;
+	    	    left: 0;
+	    	    @include transition(ease all 0.35s);
+				padding-left: 17px;
+		    	&:after {
+		    		content: "";
+				    position: absolute;
+				    top: 7px;
+				    left: 0;
+				    width: 7px;
+				    height: 7px;
+				    border-right: 1px solid currentColor;
+				    border-bottom: 1px solid currentColor;
+				    @include rotate(-45);
+		    	}
+		    	&:hover {
+		    		left: 3px;
+		    	}
+		    }
+		    &:last-child {
+		    	margin-bottom:0;
+		    }
+		}
+	}
+
+	.footer-border-light {
+		border-top: 1px solid rgba($px-white,.1);
+	}
+	.footer-border-dark {
+		border-top: 1px solid rgba($px-dark,.07);
+	}
+}

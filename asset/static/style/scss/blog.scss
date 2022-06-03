@@ -1,0 +1,266 @@
+/* Blog Grid 1
+-----------------------*/
+.blog-grid-1 {
+	overflow: hidden;
+	@include transition(ease all 0.35s);
+	.blog-img {
+		position: relative;
+		overflow: hidden;
+		img {
+			@include scale(1);
+			@include transition(ease all 0.35s);
+		}
+		.date {
+			font-size: 23px;
+			line-height: normal;
+			font-weight: 600;
+			color: $px-white;
+			background: $px-theme;
+			padding: 10px 15px;
+			border-radius: 5px;
+			display: inline-block;
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			span {
+				display: block;
+				font-size: 14px;
+			}
+		}
+	}
+	.blog-info {
+		h5 {
+			margin-bottom: 10px;
+			a {
+				color: $px-dark;
+				&:hover {
+					color: $px-theme;
+				}
+			}
+		}
+		.btn-bar {
+			padding-top: 12px;
+		}
+	}
+	&:hover {
+		.blog-img {
+			img {
+				@include scale(1.08);
+			}
+		}
+	}
+}
+
+.blog-listing {
+	.blog-grid-1 {
+		min-height: calc(100% - 30px);
+		margin-bottom: 30px;
+	}
+}
+
+.tag-cloud {
+	a {
+		padding: 3px 16px;
+		border: 1px solid #eee;
+		background: #eee;
+		color: $px-dark;
+		display: block;
+	    margin: 0 4px 6px 0px;
+	    border-radius: 40px;
+	    font-size: 0.86rem;
+	    &:hover {
+			background:  $px-theme;
+			border-color: $px-theme;
+			color: $px-white;
+		}
+	}
+}
+.pagination {
+	.page-item {
+		.page-link {
+			border: 1px solid #ccc;
+			box-shadow: none;
+			border-radius: 5px;
+			color: $px-dark;
+			margin: 0 5px;
+			&:hover {
+				background:  $px-theme;
+				border-color: $px-theme;
+				color: $px-white;
+			}
+		}
+		&.disabled {
+			.page-link {
+				opacity: 0.5;
+			}
+		}
+		&.active {
+			.page-link {
+				background: $px-theme;
+				border-color: $px-theme;
+				color: $px-white;
+			}
+		}
+	}
+}
+
+
+.article {
+    border-radius: 5px;
+    overflow: hidden;
+    background: $px-white;
+    padding: 15px;
+    margin: 0 0 30px; 
+    .article-title {
+    	padding: 15px 0 20px;
+    	h6 {
+    		font-size: 14px;
+    		font-weight: 700;
+    		margin-bottom: 20px;
+	    	a {
+	    		text-transform: uppercase;
+	    		color: $px-theme;
+	    		border-bottom: 1px solid $px-theme;
+	    	}
+    	}
+    	h2 {
+    		color: $px-dark;
+    		font-weight: 600;
+    	}
+    	.media {
+    		padding-top: 15px;
+    		border-bottom: 1px dashed #ddd;
+    		padding-bottom: 20px;
+    		.avatar {
+    			width: 45px;
+    			height: 45px;
+    			border-radius: 50%;
+    			overflow: hidden;
+    		}
+    		.media-body {
+    			padding-left: 8px;
+    			label {
+    				font-weight: 600;
+    				color: $px-theme;
+    				margin: 0;
+    			}
+    			span {
+    				display: block;
+    				font-size: 12px;
+    			}
+    		}
+    	}
+    }
+
+    .article-content {
+    	h1,
+    	h2,
+    	h3,
+    	h4,
+    	h5,
+    	h6 {
+    		color: $px-dark;
+    		font-weight: 600;
+    		margin-bottom: 15px;
+    	}
+    	blockquote {
+    		max-width: 600px;
+    		padding: 15px 0 30px 0;
+    		margin: 0;
+    		p {
+    			font-size: 20px;
+    			font-weight: 500;
+    			color: $px-theme;
+    			margin: 0 0 10px;
+    		}
+    		.blockquote-footer {
+    			color: $px-dark;
+    			font-size: 16px;
+    			cite {
+    				font-weight: 600;
+    			}
+    		}
+    	}
+    }
+    .tag-cloud {
+    	padding-top: 10px;
+    }
+}
+
+.article-comment {
+    border-radius: 5px;
+    overflow: hidden;
+    background: $px-white;
+    padding: 20px;
+    h4 {
+    	color: $px-dark;
+    	font-weight: 700;
+    	margin-bottom: 25px;
+    	font-size: 22px;
+    }
+}
+
+
+/*------------------
+*	Comments
+-------------------*/
+.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	> li:first-child {
+		> .comment-body {
+			margin-top: 0;
+			padding-top: 0;
+			border-top: none;
+		}
+	}
+	.comment-body {
+		margin-top: 40px;
+		padding-top: 40px;
+		border-top: 1px solid #ddd;
+	}
+	.comment-meta {
+		.comment-author {
+		    overflow: hidden;
+		    border-radius: 50%;
+		    -ms-flex: 0 0 50px;
+		    flex: 0 0 50px;
+		    max-width: 50px;
+		    height: 50px;
+		}
+		.comment-metadata {
+			padding-left: 20px;
+			.c-name {
+				color: $px-dark;
+				line-height: normal;
+				font-weight: 700;
+			}
+			.c-date {
+				font-size: 14px;
+				line-height: normal;
+			}
+		}
+	}
+	.comment-content {
+		padding: 10px 0 10px 70px;
+		p {
+			margin: 0;
+		}
+	}
+	.comment-reply {
+		padding-left: 70px;	
+		.m-btn {
+			padding: 0.20rem 0.8rem;
+		    font-size: 0.75rem;
+		    line-height: 1.5;
+		    border-radius: 0;
+		}
+	}
+
+	.children {
+		margin: 0;
+		padding: 0 0 0 70px;
+		list-style: none;
+	}
+}

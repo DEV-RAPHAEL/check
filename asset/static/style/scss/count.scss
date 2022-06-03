@@ -1,0 +1,15 @@
+.after-k {
+    &:after {
+        content:"K";
+    }
+}
+.after-p {
+    &:after {
+        content:"%";
+    }
+}
+.after-plus {
+    &:after {
+        content:"+";
+    }
+}

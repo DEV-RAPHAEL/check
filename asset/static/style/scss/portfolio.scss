@@ -1,0 +1,227 @@
+.portfolio-content {
+    &.grid-col-2 {
+        .grid-item {
+            width: 50%;
+
+            @include down-sm {
+                width: 100%;
+            }
+        }
+    }
+
+    &.grid-col-3 {
+        .grid-item {
+            @include up-md {
+                width: 33.3333%;
+            }
+
+            @include down-md {
+                width: 50%;
+            }
+
+            @include down-sm {
+                width: 100%;
+            }
+        }
+    }
+
+    &.grid-col-4 {
+        .grid-item {
+            @include up-md {
+                width: 33.3333%;
+            }
+
+            @include up-lg {
+                width: 25%;
+            }
+
+            @include down-md {
+                width: 50%;
+            }
+
+            @include down-sm {
+                width: 100%;
+            }
+        }
+    }
+
+    &.grid-col-5 {
+        .grid-item {
+            @include up-md {
+                width: 33.3333%;
+            }
+
+            @include up-lg {
+                width: 20%;
+            }
+
+            @include down-md {
+                width: 50%;
+            }
+
+            @include down-sm {
+                width: 100%;
+            }
+        }
+    }
+
+    &.grid-gutter-md {
+        margin-left: -4px;
+        margin-right: -4px;
+
+        .grid-item {
+            padding: 8px;
+        }
+    }
+
+    &.grid-gutter-lg {
+        margin-left: -6px;
+        margin-right: -6px;
+
+        .grid-item {
+            padding: 12px;
+        }
+    }
+
+    .grid-item {
+        float: left;
+    }
+
+}
+
+
+/*Galletry*/
+.gallery-box {
+    position: relative;
+    overflow: hidden;
+
+    .gallery-info {
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 100px;
+        height: 100px;
+        background: $px-white;
+        box-shadow: 0px 0px 19px 0px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        @include transition(ease all 0.55s);
+
+        a {
+            position: absolute;
+            bottom: 13px;
+            left: 16px;
+            color: $px-dark;
+        }
+    }
+
+    &:hover {
+        .gallery-info {
+            opacity: 1;
+        }
+    }
+}
+
+/*Portfolio Filter*/
+.portfolio-filter-01 {
+    .filter {
+        li {
+            cursor: pointer;
+            color: $px-dark;
+            position: relative;
+            padding: 5px 0;
+            font-weight: 600;
+            margin: 0 15px;
+            font-size: 16px;
+            line-height: normal;
+            @include down-md {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+            &:after {
+                content: "";
+                width: 0px;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                height: 2px;
+                background: $px-theme;
+                position: absolute;
+                @include transition(ease all 0.55s);
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                color: $px-theme;
+            }
+
+            &.active {
+                color: $px-theme;
+
+                &:after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* Portfolio 1
+-------------------*/
+.portfolio-box-01 {
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content:"";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: auto;
+        right: 0;
+        width: 0px;
+        background: rgba($px-black, 0.8);
+        @include transition(ease all 0.35s);
+    }
+    .portfolio-info {
+        position: absolute;
+        bottom: 0;
+        left: -40px;
+        right: 0;
+        top: 0;
+        padding: 20px;
+        @include transition(ease all 0.45s);
+        opacity: 0;
+        h5 {
+            margin: 0 0 4px;
+            font-size: 22px;
+            a {
+                color: $px-white;
+            }
+        }
+        span {
+            color: rgba(255,255,255,.8);
+            font-size: 14px;
+        }
+        .btn-bar {
+            padding-top: 16px;
+        }
+    }
+    &:hover {
+        &:before {
+            width:100%;
+            left: 0;
+            right: auto;
+        }
+        .portfolio-info {
+            opacity: 1;
+            left: 0;
+        }
+    }
+}

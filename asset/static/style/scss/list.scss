@@ -1,0 +1,151 @@
+.list-type-01 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		position: relative;
+		padding: 2px 0 2px 25px;
+		&:after {
+	        content: "";
+		    width: 6px;
+		    height: 12px;
+		    position: absolute;
+		    top: 5px;
+		    left: 6px;
+		    color: $px-white;
+		    border-right: 2px solid currentColor;
+		    border-bottom: 2px solid currentColor;
+		    @include rotate(45);
+		}
+		&:before {
+		    content: "";
+		    width: 15px;
+		    height: 15px;
+		    position: absolute;
+		    top: 6px;
+		    left: 0;
+		    background: $px-theme;
+		    border-radius: 50%;
+		}
+	}
+	&.white {
+		li {
+			&:after {
+				color: $px-theme;
+			}
+			&:before {
+				background: $px-white;
+			}
+		}
+	}
+}
+
+.list-type-02 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		position: relative;
+		padding: 3px 0 3px 20px;
+		&:after {
+	        content: "";
+	        width: 5px;
+		    height: 9px;
+		    position: absolute;
+		    top: 10px;
+		    left: 3px;
+		    color: $px-theme;
+		    border-right: 2px solid currentColor;
+		    border-bottom: 2px solid currentColor;
+		    @include rotate(45);
+		}
+	}
+	&.white {
+		li {
+			&:after {
+				color: $px-white;
+			}
+		}
+	}
+}
+
+.list-type-03 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		position: relative;
+		padding: 7px 0 8px 25px;
+		&:after {
+	        content: "";
+		    width: 6px;
+		    height: 12px;
+		    position: absolute;
+		    top: 10px;
+		    left: 6px;
+		    color: $px-white;
+		    border-right: 2px solid currentColor;
+		    border-bottom: 2px solid currentColor;
+		    @include rotate(45);
+		}
+		&:before {
+		    content: "";
+		    width: 15px;
+		    height: 15px;
+		    position: absolute;
+		    top: 11px;
+		    left: 0;
+		    background: $px-theme;
+		    border-radius: 50%;
+		}
+	}
+	&.theme2nd {
+		li {
+			&:before {
+				background: $px-theme2nd;
+			}
+		}		
+	}
+	&.white {
+		li {
+			&:after {
+				color: $px-dark;
+			}
+			&:before {
+				background: $px-white;
+			}
+		}		
+	}
+}
+
+.list-type-04 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		position: relative;
+		padding: 9px 0 9px 25px;
+		+ li {
+			border-top: 1px solid #ddd;
+		}
+		i {
+			position: absolute;
+			top: 10;
+			left: 0;
+		}
+	}
+}
+
+
+.list-type-05 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	li {
+		position: relative;
+		padding: 9px 0;
+		+ li {
+			border-top: 1px solid rgba($px-black, 0.2);
+		}
+	}
+}

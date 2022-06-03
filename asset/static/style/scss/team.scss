@@ -1,0 +1,46 @@
+.our-team {
+	.team-img {
+		position: relative;
+		overflow: hidden;
+		border-radius: 5px;
+		&:after {
+			content:"";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			opacity: 0;
+			@include transition(ease all 0.33s);
+			background: linear-gradient(to top,rgba(23,22,26,.6),transparent);
+		}
+		img {
+			@include scale(1);
+			@include transition(ease all 0.33s);
+		}
+	}
+	.team-info {
+		padding-top: 15px;
+	}
+	.team-desc {
+	    position: absolute;
+	    bottom: 0;
+	    padding: 15px;
+	    opacity: 0;
+	    z-index: 1;
+	    @include transition(ease all 0.33s);
+	}
+	&:hover {
+		.team-img {
+			&:after {
+				opacity:0.6;
+			}
+			img {
+				@include scale(1.1);
+			}
+		}
+		.team-desc {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+/* ----------------------
+*   Opacity
+---------------------------*/
+@for $i from 1 through 9 {
+    .opacity-#{$i} {
+        opacity: #{$i / 10};
+    }
+}
+
+/* ----------------------
+*   z-index
+---------------------------*/
+@for $i from 1 through 9 {
+    .z-index-#{$i} {
+        z-index: #{$i};
+    }
+}
+
+/* ----------------------
+*   transeition
+---------------------------*/
+.transition  {
+    @include transition(ease-in-out all 0.35s);
+}
+
+[class*="hover-"] {
+    @include transition(ease-in-out all 0.35s); 
+}
+
+/* ----------------------
+*   Image Hover
+---------------------------*/
+.img-hover {
+    .img-hover-in {
+        overflow: hidden;
+        img {
+            @include transition(ease-in-out all 0.33s);
+            @include scale(1);
+        }
+    }
+    &:hover {
+        .img-hover-in {
+            img {
+                @include scale(1.1);
+            }
+        }
+    }
+}
+/* ----------------------
+*   Top Hover
+---------------------------*/
+.hover-top {
+    position: relative;
+    top: 0;
+    &:hover {
+        top:-10px;
+    }
+}
+
+.hover-top-in {
+    .hover-top--in {
+        position: relative;
+        top: 0;
+    }
+    &:hover {
+        .hover-top--in {
+            top:-10px;       
+        }
+    }
+}
+
+/* ----------------------
+*   Grayscale Hover
+---------------------------*/
+.grayscale {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+.grayscale-hover {
+    img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        opacity: .7;
+    }
+    &:hover {
+        img {
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+            opacity: 1;
+        }   
+    }
+}
+
+/* ----------------------
+*   Box shadow
+---------------------------*/
+.box-shadow-lg {
+    box-shadow: $box-shadow-lg;
+}
+.box-shadow {
+    box-shadow: $box-shadow;
+}
+.box-shadow-hover {
+    box-shadow: $box-shadow;
+    &:hover {
+        box-shadow: $box-shadow-lg;
+    }
+}
+.box-shadow-only-hover {
+    &:hover {
+        box-shadow: $box-shadow-lg;
+    }
+}

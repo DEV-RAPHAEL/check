@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk-bold-webfont.woff2') format('woff2'),
+        url('spacegrotesk-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk-light-webfont.woff2') format('woff2'),
+        url('spacegrotesk-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk-medium-webfont.woff2') format('woff2'),
+        url('spacegrotesk-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk-regular-webfont.woff2') format('woff2'),
+        url('spacegrotesk-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'Space Grotesk';
+    src: url('spacegrotesk-semibold-webfont.woff2') format('woff2'),
+        url('spacegrotesk-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}

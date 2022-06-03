@@ -1,0 +1,503 @@
+/* particles-box
+---------------------------*/
+.particles-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+/* Effect Section
+------------------------*/
+.effect-section {
+    position: relative;
+    overflow: hidden;
+    .svg-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+    }
+    .svg-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+    }
+    .rotate-svg {
+        svg {
+            @include rotate(180);
+        }
+    }
+    .effect-1 {
+        position: absolute;
+        top: -70px;
+        left: -70px;
+        width: 400px;
+        height: 400px;
+        @include down-md {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .effect-2 {
+        position: absolute;
+        bottom: -70px;
+        right: -70px;
+        width: 400px;
+        height: 400px;
+        @include down-md {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .effect-3 {
+        position: absolute;
+        top: -15vw;
+        left: -15vw;
+        width: 400px;
+        height: 400px;
+        @include down-md {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .effect-4 {
+        position: absolute;
+        bottom: -70px;
+        right: -100px;
+        width: 400px;
+        height: 400px;
+        @include down-md {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .sm-effect-1 {
+        position: absolute;
+        top: -60px;
+        left: -20px;
+        width: 180px;
+        height: 180px;
+    }
+    .sm-effect-2 {
+        position: absolute;
+        bottom: -60px;
+        right: -20px;
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+.divider-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+    svg {
+        position: absolute;
+        top: -50%;
+        bottom: -50%;
+        left: 0;
+        height: 200%;
+    }
+}
+
+.divider-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+    text-align: right;
+    svg {
+        position: absolute;
+        top: -50%;
+        bottom: -50%;
+        right: 0;
+        height: 200%;
+    }
+}
+
+.effect-radius-bg {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index:-1;
+    > div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      width: 23rem;
+      height: 23rem;
+      border-radius: 100%;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(227, 221, 246, 0.1)), color-stop(65%, rgba(227, 221, 246, 0.2)), to(rgba(227, 221, 246, 0.1)));
+      background-image: -webkit-linear-gradient(top, rgba(227, 221, 246, 0.1) 0%, rgba(227, 221, 246, 0.2) 65%, rgba(227, 221, 246, 0.1) 100%);
+      background-image: -o-linear-gradient(top, rgba(227, 221, 246, 0.1) 0%, rgba(227, 221, 246, 0.2) 65%, rgba(227, 221, 246, 0.1) 100%);
+      background-image: linear-gradient(-180deg, rgba(227, 221, 246, 0.1) 0%, rgba(227, 221, 246, 0.2) 65%, rgba(227, 221, 246, 0.1) 100%);
+      z-index: -1;
+    }
+
+    .radius-1 {
+      -webkit-transform: translate(-50%, -50%) scale(0.67);
+      -ms-transform: translate(-50%, -50%) scale(0.67);
+      transform: translate(-50%, -50%) scale(0.67);
+    }
+
+    .radius-2 {
+      -webkit-transform: translate(-50%, -50%) scale(1.05);
+      -ms-transform: translate(-50%, -50%) scale(1.05);
+      transform: translate(-50%, -50%) scale(1.05);
+    }
+
+    .radius-3 {
+      -webkit-transform: translate(-50%, -50%) scale(1.63);
+      -ms-transform: translate(-50%, -50%) scale(1.63);
+      transform: translate(-50%, -50%) scale(1.63);
+    }
+
+    .radius-4 {
+      -webkit-transform: translate(-50%, -50%) scale(2.1);
+      -ms-transform: translate(-50%, -50%) scale(2.1);
+      transform: translate(-50%, -50%) scale(2.1);
+    }
+
+    .radius-x {
+      will-change: transform;
+      -webkit-animation: pulsate 3s infinite;
+      animation: pulsate 3s infinite;
+    }
+  }
+
+
+@-webkit-keyframes pulsate {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(4);
+    transform: translate(-50%, -50%) scale(4)
+  }
+
+}
+
+@keyframes pulsate {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5)
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(4);
+    transform: translate(-50%, -50%) scale(4)
+  }
+
+}
+
+
+/* After 50
+------------------------*/
+.after-50 {
+    position: relative;
+    &:after {
+        content:"";
+        position:absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 2px;
+        .text-center & {
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+/* Process Step
+------------------------*/
+.process-step {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include down-lg {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    &:first-child {
+        padding-top:0;
+    }
+    &:last-child {
+        padding-bottom:0;
+    }
+    &:not(:last-child) {
+        &:after {
+            content: "";
+            position: absolute;
+            border-radius: 0 140px 0 0;
+            width: 80px;
+            height: 200px;
+            left: 100px;
+            bottom: -100px;
+            @include rotate(72);
+            right: 0;
+            margin: auto;
+            border-top: 2px dashed rgba($px-black, 0.1);
+            border-right:  2px dashed rgba($px-black, 0.1);
+            @include down-lg {
+                width: 40px;
+                height: 100px;
+                left: 50px;
+                bottom: -50px;
+            }
+        }
+    }
+    &:nth-child(even) {
+        &:after {
+            border-top: none;
+            border-bottom: 2px dashed rgba($px-black, 0.1);
+            border-radius: 0 0 140px 0;
+            @include rotate(-72);
+        }
+    }
+}
+
+/* Mask
+------------------------*/
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.mask-90 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+}
+.mask-80 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+}
+.mask-75 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 25%;
+}
+.mask-65 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 35%;
+}
+
+.mask-50 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 50%;
+}
+
+.mask-40 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 40%;
+}
+
+@include up-lg {
+    .mask-50vw {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+        width: calc(50vw + 15px);
+        .no-gutters & {
+            width: 50vw;
+        }
+        &.left {
+            right: -15px;
+        }
+        &.right {
+            left: -15px;
+        }
+    }
+}
+
+@include down-lg {
+    .mask-50vw {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -15px;
+        right: -15px;
+        z-index: -1;
+    }
+}
+
+/* mouse
+------------------------*/
+.mouse {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+    display: inline-block;
+    width: 26px;
+    height: 46px;
+    border-radius: 10rem;
+    border: 2px solid currentColor;
+    &:after {
+        @include translate(-50%, 0);
+        content: "";
+        position: absolute;
+        display: block;
+        top: 25%;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        background: currentColor;
+        border-radius: 50%;
+        -webkit-animation: mouse 2s linear infinite;
+        -moz-animation: mouse 2s linear infinite;
+        animation: mouse 2s linear infinite;
+    }
+}
+
+@-webkit-keyframes mouse {
+  0% {
+    opacity: 1;
+    @include translate(-50%,0);
+  }
+  100% {
+    opacity: 0;
+    @include translate(-50%,20px);
+  }
+}
+
+@-moz-keyframes mouse {
+  0% {
+    opacity: 1;
+    @include translate(-50%,0);
+  }
+  100% {
+    opacity: 0;
+    @include translate(-50%,20px);
+  }
+}
+
+@keyframes mouse {
+  0% {
+    opacity: 1;
+    @include translate(-50%,0);
+  }
+  100% {
+    opacity: 0;
+    @include translate(-50%,20px);
+  }
+}
+
+/* Phone Frame
+------------------------*/
+.phone-frame {
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    .pf-inner {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 72%;
+        height: 84%;
+        margin: 10% 0 0 14%;
+        border-radius: 5%;
+    }
+}
+
+/* Sticky
+------------------------*/
+.sticky-xl-top {
+    @include up-xl {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        .fixed-header~main & {
+            top: 90px;
+        }
+    }
+}
+
+.sticky-lg-top {
+    @include up-lg {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        .fixed-header~main & {
+            top: 90px;
+        }
+    }
+}
+
+.sticky-md-top {
+    @include up-md {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        .fixed-header~main & {
+            top: 90px;
+        }
+    }
+}
+
+.sticky-sm-top {
+    @include up-sm {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        .fixed-header~main & {
+            top: 90px;
+        }
+    }
+}

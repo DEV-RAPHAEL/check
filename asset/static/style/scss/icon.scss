@@ -1,0 +1,196 @@
+@for $i from 3 through 12 {
+    .icon-#{$i * 10} {
+        width: #{$i * 10}px;
+        height: #{$i * 10}px;
+        text-align:center;
+        font-size: #{$i * 10 / 2 - 4}px;
+        i {
+            line-height: #{$i * 10}px;
+            &.number {
+                font-style: normal;
+            }
+        }
+    }
+}
+
+@for $i from 3 through 12 {
+    .only-icon-#{$i * 10} {
+        width: #{$i * 10}px;
+        font-size: #{$i * 10 / 2 + 10}px;
+        line-height: #{$i * 10 / 2 + 10}px;
+    }
+}
+
+
+.flip-box {
+    position: relative;
+    overflow: hidden;
+    .flip-box-img {
+        @include transition(ease all 0.35s);
+        @include transform(rotateY(0deg));
+    }
+    .flip-box-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        @include transition(ease all 0.35s);
+        @include transform(rotateY(180deg));
+    }
+    &:hover {
+        .flip-box-img {
+            @include transform(rotateY(180deg));
+            opacity: 0;
+        }
+        .flip-box-content {
+            opacity: 1;
+            @include transform(rotateY(0deg));
+        }
+    }
+}
+
+.line-hover {
+    position: relative;
+    overflow: hidden;
+    &:before,
+    &:after {
+        content:"";
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        @include transition(ease all 0.3s);
+        pointer-events: none;
+    }
+    &:before {
+        top: 0;
+        left:0;
+        border-left: 5px solid $px-theme;
+        border-top: 5px solid $px-theme;
+    }
+    &:after {
+        bottom: 0;
+        right: 0;
+        border-right: 5px solid $px-theme;
+        border-bottom: 5px solid $px-theme;
+    }
+    &:hover {
+        &:after,
+        &:before {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.feature-hover-1 {
+    position: relative;
+    overflow: hidden;
+    .feature-content {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        padding: 10%;
+        opacity: 0;
+        @include transition(ease all 0.35s);
+    }
+    &:hover {
+        .feature-content {
+            opacity: 1;
+            left: 0;
+        }
+    }
+}
+
+.feature-hover-2 {
+    position: relative;
+    overflow: hidden;
+    .feature-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 8%;
+        .btn-bar {
+            position: relative;
+            margin-bottom: -30px;
+            opacity: 0;
+            @include transition(ease all 0.35s);
+        }
+    }
+    &:hover {
+        .feature-content {
+            .btn-bar {
+                opacity: 1;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.feature-hover-3 {
+    position: relative;
+    overflow: hidden;
+    .feature-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 8%;
+        padding-top: 12%;
+        margin-bottom: -30px;
+        opacity: 0;
+        background: rgba($px-black, 0.6);
+        @include transition(ease all 0.35s);
+    }
+    &:hover {
+        .feature-content {
+            opacity: 1;
+            padding-top: 8%;
+        }
+    }
+}
+
+.feature-box-1 {
+    &:not(.last) {
+        &:after {
+            content: "";
+            position: absolute;
+            top: 24%;
+            width: 60px;
+            right: -30px;
+            height: 1px;
+            background: $px-black;
+            opacity: 0.2;
+            z-index: 1;
+        }
+    }
+    @include down-lg {
+      &[class*="col-lg"]:nth-child(2n + 2) {
+        &:after {
+            opacity: 0;
+        }
+      }
+    }
+    @include down-md {
+      &[class*="col-md"] {
+        &:after {
+            display: none;
+        }
+      }
+    }
+    @include down-sm {
+      &[class*="col-sm"] {
+        &:after {
+            display: none;
+        }
+      }
+    }
+}
